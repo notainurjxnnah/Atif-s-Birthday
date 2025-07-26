@@ -4,18 +4,72 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <h1>🎟️ Your Date Voucher 💌</h1>
-  <img src="../images/zus-voucher.jpg" alt="voucher" style="width:90%; border-radius: 10px;">
-  <p><strong>Terms & Conditions:</strong></p>
-  <ul>
-    <li>Redeemable for one cute date 😘</li>
-    <li>Valid for 7 days after your birthday</li>
-    <li>Includes 1 hug + 1 kiss minimum 😚</li>
-  </ul>
-  <button onclick="redeem()">🎉 Redeem</button>
+  <h1>🎟 Our Date Vouchers 💌</h1>
+
+  <div class="voucher-container">
+
+    <!-- Mixue Date -->
+    <div class="voucher-card">
+      <img src="../images/mixue.jpg" alt="Mixue Date" class="voucher-img">
+      <div class="voucher-info">
+        <h3>🍦 Mixue Date</h3>
+        <ul>
+          <li>1 cup Mixue each</li>
+          <li>Must be sweet that day 😚</li>
+        </ul>
+        <button class="redeem-btn" onclick="redeem('Mixue Date')">🎉 Redeem</button>
+      </div>
+    </div>
+
+    <!-- Taiping Date -->
+    <div class="voucher-card">
+      <img src="../images/taiping.jpg" alt="Taiping Date" class="voucher-img">
+      <div class="voucher-info">
+        <h3>🌳 Taiping Lake Date</h3>
+        <ul>
+          <li>Romantic walk + picnic</li>
+          <li>Feed the ducks 🦆</li>
+        </ul>
+        <button class="redeem-btn" onclick="redeem('Taiping Lake Date')">🎉 Redeem</button>
+      </div>
+    </div>
+
+    <!-- Birthday Date -->
+    <div class="voucher-card">
+      <img src="../images/birthday.jpg" alt="Birthday Date" class="voucher-img">
+      <div class="voucher-info">
+        <h3>🎂 Birthday Surprise</h3>
+        <ul>
+          <li>One full day of pampering</li>
+          <li>Your wish is my command 🥰</li>
+        </ul>
+        <button class="redeem-btn" onclick="redeem('Birthday Surprise')">🎉 Redeem</button>
+      </div>
+    </div>
+
+    <!-- Merisik (Locked) -->
+    <div class="voucher-card locked">
+      <img src="../images/merisik.jpg" alt="Merisik" class="voucher-img">
+      <div class="voucher-info">
+        <h3>💍 Merisik Voucher</h3>
+        <p class="locked-msg">🔒 Unlocks later, sabar sayang 😘</p>
+      </div>
+    </div>
+
+    <!-- Bertunang (Locked) -->
+    <div class="voucher-card locked">
+      <img src="../images/bertunang.jpg" alt="Bertunang" class="voucher-img">
+      <div class="voucher-info">
+        <h3>💖 Bertunang Voucher</h3>
+        <p class="locked-msg">🔒 Patience, beautiful moments await 🥹</p>
+      </div>
+    </div>
+
+  </div>
+
   <script>
-    function redeem() {
-      alert("Yay! Your voucher has been redeemed! 💖");
+    function redeem(title) {
+      alert("Yay! '" + title + "' has been redeemed! 💖");
     }
   </script>
 </body>
