@@ -1,95 +1,26 @@
-/* General Reset */
+/* ========== General Reset ========== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #fff1ec; /* Soft beige-pink */
-  color: #8b0000; /* Red wine */
-  padding: 1rem;
-}
-
-/* Flip Clock Styling */
-.flip-clock {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 20px auto;
-  flex-wrap: wrap;
-}
-
-.flip-box {
-  background-color: #8b0000; /* Red wine */
-  color: white;
-  padding: 15px 10px;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 10px;
-  text-align: center;
-  min-width: 65px;
-}
-
-.flip-label {
-  font-size: 12px;
-  color: #b22222;
-  text-align: center;
-  margin-top: 5px;
-}
-
-/* Tabs (Linktree-style buttons) */
-.tab-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 30px;
-}
-
-.tab-buttons a {
-  background-color: #b22222;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.tab-buttons a:hover {
-  transform: scale(1.02);
-  background-color: #8b0000;
-}
-
-/* Responsive for smaller phones */
-@media (max-width: 600px) {
-  .flip-box {
-    font-size: 20px;
-    padding: 12px 8px;
-    min-width: 55px;
-  }
-
-  .tab-buttons a {
-    padding: 18px;
-    font-size: 18px;
-  }
-}
+/* ========== Body ========== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fefefe;
-  text-align: center;
+  background-color: #fff1ec; /* soft beige-pink */
+  color: #8b0000; /* red wine */
   padding: 20px;
-  color: #333;
+  text-align: center;
 }
 
+/* ========== Headings ========== */
 h1 {
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
+/* ========== Voucher Container & Cards ========== */
 .voucher-container {
   display: flex;
   flex-wrap: wrap;
@@ -98,7 +29,7 @@ h1 {
 }
 
 .voucher-card {
-  background-color: #f5f0e6; /* beige background */
+  background-color: #f5f0e6; /* beige */
   border: 1px solid #ccc;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(139, 0, 0, 0.15); /* warm reddish shadow */
@@ -120,18 +51,19 @@ h1 {
 .voucher-info {
   padding: 15px;
   text-align: left;
-  background-color: #8b0000; /* red tab */
+  background-color: #8b0000; /* red wine tab */
   color: white;
+  font-weight: 600;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  font-weight: 600;
 }
 
+/* ========== Redeem Button ========== */
 .redeem-btn {
   display: block;
   margin: 15px auto 5px;
-  background-color: white; /* white button */
-  color: #8b0000; /* red text */
+  background-color: white;
+  color: #8b0000;
   border: 2px solid #8b0000;
   padding: 10px 20px;
   border-radius: 20px;
@@ -146,6 +78,7 @@ h1 {
   border-color: #8b0000;
 }
 
+/* ========== Locked State ========== */
 .locked {
   opacity: 0.6;
   position: relative;
@@ -158,12 +91,13 @@ h1 {
   font-style: italic;
 }
 
+/* ========== Lists ========== */
 ul {
   padding-left: 20px;
   margin: 10px 0;
 }
 
-/* Countdown Flip Style */
+/* ========== Countdown Flip Clock ========== */
 .countdown {
   display: flex;
   justify-content: center;
@@ -179,7 +113,7 @@ ul {
   padding: 10px 14px;
   text-align: center;
   width: 70px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .number {
@@ -193,4 +127,71 @@ ul {
   letter-spacing: 1px;
   margin-top: 5px;
   font-weight: 600;
+}
+
+/* ========== Flip Clock (alternative style) ========== */
+.flip-clock {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.flip-box {
+  background-color: #8b0000;
+  color: white;
+  padding: 15px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 65px;
+}
+
+.flip-label {
+  font-size: 12px;
+  color: #b22222;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* ========== Tabs (Linktree-style buttons) ========== */
+.tab-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+.tab-buttons a {
+  background-color: #b22222;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tab-buttons a:hover {
+  transform: scale(1.02);
+  background-color: #8b0000;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 600px) {
+  .flip-box {
+    font-size: 20px;
+    padding: 12px 8px;
+    min-width: 55px;
+  }
+
+  .tab-buttons a {
+    padding: 18px;
+    font-size: 18px;
+  }
 }
