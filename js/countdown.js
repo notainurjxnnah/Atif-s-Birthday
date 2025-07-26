@@ -1,19 +1,24 @@
-const endDate = new Date("October 3, 2025 00:00:00").getTime();
+const targetDate = new Date("October 3, 2025 00:00:00").getTime();
 
-function updateCountdown() {
+const updateCountdown = () => {
   const now = new Date().getTime();
-  const diff = endDate - now;
+  const distance = targetDate - now;
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / 1000 / 60) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-}
+  document.getElementById("days").innerText = days.toString().padStart(2, "0");
+  document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+  document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+  document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
 
-setInterval(updateCountdown, 1000);
+  if (distance < 0) {
+    clearInterval(timer);
+    document.querySelector(".countdown-container").innerHTML = "<p>Happy Birthday, Sayang!</p>";
+  }
+};
+
+const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
