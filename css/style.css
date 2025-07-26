@@ -1,33 +1,80 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fff1ec; /* Soft beige-pink */
+  color: #8b0000; /* Red wine */
+  padding: 1rem;
+}
+
+/* Flip Clock Styling */
+.flip-clock {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.flip-box {
+  background-color: #8b0000; /* Red wine */
+  color: white;
+  padding: 15px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 65px;
+}
+
+.flip-label {
+  font-size: 12px;
+  color: #b22222;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Tabs (Linktree-style buttons) */
+.tab-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+.tab-buttons a {
+  background-color: #b22222;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.tab-buttons a:hover {
+  transform: scale(1.02);
+  background-color: #8b0000;
+}
+
+/* Responsive for smaller phones */
 @media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
+  .flip-box {
+    font-size: 20px;
+    padding: 12px 8px;
+    min-width: 55px;
   }
 
-  .countdown-container {
-    transform: scale(0.8);
-    margin-top: 20px;
-  }
-
-  .tab-links a {
-    display: block;
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .voucher {
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  button {
-    width: 100%;
-    padding: 12px;
+  .tab-buttons a {
+    padding: 18px;
     font-size: 18px;
   }
 }
