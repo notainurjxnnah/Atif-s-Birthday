@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Sayang 🎉</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-page">
+  <audio autoplay loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="countdown-container">
+    <h2>Countdown to Your Birthday 🎈</h2>
+    <div class="labels">
+      <span>Days</span><span>Hours</span><span>Minutes</span><span>Seconds</span>
+    </div>
+    <div id="countdown">
+      <div class="flip-box"><span id="days">00</span></div>
+      <div class="flip-box"><span id="hours">00</span></div>
+      <div class="flip-box"><span id="minutes">00</span></div>
+      <div class="flip-box"><span id="seconds">00</span></div>
+    </div>
+  </div>
+
+  <div class="love-message">
+    <p id="customMessage">You are the best thing that ever happened to me, sayang ❤️</p>
+  </div>
+
+  <div class="tab-links">
+    <a href="tabs/wish.html" onclick="return checkBirthday()">🎁 Birthday Wish</a>
+    <a href="tabs/story.html">📖 Our Story</a>
+    <a href="tabs/voucher.html">🎟️ Date Voucher</a>
+  </div>
+
+  <script src="js/countdown.js"></script>
+  <script src="js/unlock.js"></script>
+</body>
+</html>
