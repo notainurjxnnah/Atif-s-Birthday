@@ -1,16 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hi Sayang ❤️</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi Sayang &lt;3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background-color: rgba(255, 245, 240, 0.95); /* soft beige */
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 350px;
+      text-align: center;
+    }
+    h2 {
+      margin: 0 0 20px;
+      font-size: 22px;
+      color: #8b0000; /* red wine */
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #bbb;
+      border-radius: 10px;
+      background-color: #fff8f6;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      background-color: #b22222; /* darker red wine */
+      color: white;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #8b0000;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    @media (max-height: 500px) {
+      .login-box {
+        padding: 20px 10px;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
-<body class="login-page">
-  <h2>Hi Sayang &lt;3</h2>
-  <form onsubmit="return validateLogin(event)">
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button type="submit">Enter</button>
-  </form>
-  <script src="js/auth.js"></script>
+<body>
+  <div class="login-box">
+    <h2>Hi Sayang &lt;3</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p class="error" id="error"></p>
+  </div>
+
+  <!-- Optional looping background music -->
+  <audio autoplay loop>
+    <source src="music/background.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      if (user === "baby" && pass === "03102002") {
+        window.location.href = "loading.html"; // ✅ correct redirect
+      } else {
+        document.getElementById("error").textContent = "Wrong username or password, try again.";
+      }
+    }
+  </script>
 </body>
 </html>
